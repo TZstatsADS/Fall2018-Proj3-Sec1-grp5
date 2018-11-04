@@ -47,8 +47,8 @@ feature <- function(LR_dir, HR_dir, n_points=1000){
     
     for(j in 1:3){
       lt<-feat_each_mat(imgLR[,,j],imgHR[,,j])
-      featMat[(1000*i-999):(1000*i),,j]<-lt[[1]]
-      labMat[(1000*i-999):(1000*i),,j]<-lt[[2]]
+      featMat[(n_points*(i-1)+1):(n_points*i),,j]<-lt[[1]]
+      labMat[(n_points*(i-1)+1):(n_points*i),,j]<-lt[[2]]
     }
     #print(i)
   }
