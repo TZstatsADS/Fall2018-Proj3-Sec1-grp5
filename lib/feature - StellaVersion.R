@@ -41,7 +41,7 @@ feature <- function(LR_dir, HR_dir, n_points=1000){
     imgLR <- readImage(paste0(LR_dir,  "img_", sprintf("%04d", i), ".jpg"))
     imgHR <- readImage(paste0(HR_dir,  "img_", sprintf("%04d", i), ".jpg"))
     
-    set.seed(22)
+    #set.seed(22)
     samp_ind<-cbind(sample(1:dim(imgLR)[1],n_points,replace = T),
                     sample(1:dim(imgLR)[2],n_points,replace = T))
     
@@ -50,7 +50,7 @@ feature <- function(LR_dir, HR_dir, n_points=1000){
       featMat[(1000*i-999):(1000*i),,j]<-lt[[1]]
       labMat[(1000*i-999):(1000*i),,j]<-lt[[2]]
     }
-    print(i)
+    #print(i)
   }
   return(list(feature = featMat, label = labMat))
 }
