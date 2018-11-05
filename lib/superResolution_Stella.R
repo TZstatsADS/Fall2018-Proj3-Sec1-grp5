@@ -31,6 +31,7 @@ superResolution <- function(LR_dir, HR_dir, modelList){
   } 
   ##############################################################################
   ### read LR/HR image pairs
+  n_files <- length(list.files(LR_dir))
   for(i in 1:n_files){
     imgLR <- readImage(paste0(LR_dir,  "img", "_", sprintf("%04d", i), ".jpg"))
     pathHR <- paste0(HR_dir,  "img", "_", sprintf("%04d", i), ".jpg")
