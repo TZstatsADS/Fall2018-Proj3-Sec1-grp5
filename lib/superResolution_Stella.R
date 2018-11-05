@@ -41,20 +41,14 @@ superResolution <- function(LR_dir, HR_dir, modelList){
   for(i in 1:n_files){
     imgLR <- readImage(paste0(LR_dir,  "img", "_", sprintf("%04d", i), ".jpg"))
     pathHR <- paste0(HR_dir,  "img", "_", sprintf("%04d", i), ".jpg")
-    featMat <- array(NA, c(dim(imgLR)[1] * dim(imgLR)[2], 8, 3))
-
-    for(j in 1:3){
-      featMat[,,j]<-feat(imgLR[,,j])
-    }
+    
+    featMat<-array(apply(imgLR,3,feat),dim = c(dim(imgLR)[1] * dim(imgLR)[2], 8, 3))
     ### step 2. apply the modelList over featMat
     predMat <- test(modelList, featMat)
-    ### step 3. recover high-resolution from predMat and save in HR_dir
     pred<-array(predMat,dim = c(nrow(imgLR)*2,ncol(imgLR)*2,3))
-    img_origin<-array(NA,dim = c(nrow(imgLR)*2,ncol(imgLR)*2,3))
-    for(i in 1:3){
-      img_origin[,,i]<-dup(imgLR[,,i])
-    }
-   
+    ### step 3. recover high-resolution from predMat and save in HR_dir
+    
+    img_origin<-array(apply(imgLR,3,dup),dim= c(nrow(imgLR)*2,ncol(imgLR)*2,3))
     writeImage(pred+img_origin,file_name = pathHR)
     
   }
@@ -63,4 +57,5 @@ superResolution <- function(LR_dir, HR_dir, modelList){
 
 # LR_d<-"./data/try_file/LR/"
 # HR_d<-"./data/try_file/HR/"
-# superResolution(LR_d,HR_d,ml)
+#superResolution(LR_d,HR_d,ml)
+#system.time(superResolution(LR_d,HR_d,ml))
