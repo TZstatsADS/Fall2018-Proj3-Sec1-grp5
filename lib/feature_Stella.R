@@ -41,9 +41,8 @@ feature <- function(LR_dir, HR_dir, n_points=1000){
     imgLR <- readImage(paste0(LR_dir,  "img_", sprintf("%04d", i), ".jpg"))
     imgHR <- readImage(paste0(HR_dir,  "img_", sprintf("%04d", i), ".jpg"))
     
-    #set.seed(22)
-    samp_ind<-cbind(sample(1:dim(imgLR)[1],n_points,replace = T),
-                    sample(1:dim(imgLR)[2],n_points,replace = T))
+    samp_p<-sample(imgLR[,,1],n_points,replace = F)
+    samp_ind<-arrayInd(samp_p,dim(imgLR[,,1]))
     
     for(j in 1:3){
       lt<-feat_each_mat(imgLR[,,j],imgHR[,,j])
