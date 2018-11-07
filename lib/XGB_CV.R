@@ -13,7 +13,7 @@ XGB_crossvalidation <- function(feat_dat, label_dat){
   
   compare <- matrix(c(eta = 0, depth = 0, colsample_tree = 0, best_iter = 0, best_rmse = 0),ncol = 5)
   
-  for(b in 1:2){
+  for(b in 1:3){
     for(c in 1:2){
         for(e in 1:2){
           
