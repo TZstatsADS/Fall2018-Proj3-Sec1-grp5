@@ -7,11 +7,11 @@ Term: Fall 2018
 
 + Team #5
 + Team members
-	+ Sizhu Chen sc4248
-	+ Binglun Zhao
-	+ Hengyang Lin
-	+ Yang Yue
-	+ team member 5
+	+ Sizhu Chen     sc4248
+	+ Binglun Zhao   bz2342
+	+ Hengyang Lin   hl3116
+	+ Yang Yue       yy2826
+	+ Bailey Pierson bp2471
 
 + Project summary: In this project, we created a classification engine for enhance the resolution of images. 
 	
