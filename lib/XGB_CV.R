@@ -13,11 +13,11 @@ XGB_crossvalidation <- function(feat_dat, label_dat){
   
   compare <- matrix(c(eta = 0, depth = 0, colsample_tree = 0, best_iter = 0, best_rmse = 0),ncol = 5)
   
-  for(b in 1:3){
+  for(b in 2:2){
     for(c in 1:2){
         for(e in 1:2){
           
-          max <- 100
+          max <- 200
           eva <- rep(0, max)
           params <- list(eta = v.eta[b], max_depth = v.depth[c], colsample_bytree = v.colsample_bytree[e])
           for (i in 1:12){
@@ -28,9 +28,7 @@ XGB_crossvalidation <- function(feat_dat, label_dat){
             labMat <- label_dat[, c1, c2]
               
             xg_mat <- xgb.DMatrix(data = featMat, label = labMat)
-              
             fit <- xgb.cv(params = params, data = xg_mat, objective = "reg:linear", nrounds = max, verbose = 1, nfold = 5)
-              
             eva <- eva + fit$evaluation_log[,4]
           }
           
