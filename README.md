@@ -17,7 +17,7 @@ Term: Fall 2018
 	
 **Contribution statement**: All team members approve our work presented in this GitHub repository including this contributions statement. 
 + Sizhu Chen: feature and superResolution coding, baseline model (GBM) tuning, presentation slides designing
-+ Binglun Zhao: train.R efficiency improving, baseline model (GBM) tuning
++ Binglun Zhao: train and cross-validation efficiency improving, baseline model (GBM) tuning
 + Hengyang Lin:
 + Yang Yue:
 + Bailey Pierson: MSE and PSNR coding, Random Forest attempt
