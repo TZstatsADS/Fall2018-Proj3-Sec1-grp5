@@ -1,5 +1,5 @@
 # Project: Can you unscramble a blurry image? 
-![image](figs/example.png)
+![image](figs/img_0001.jpg) ![image](figs/test_pic.jpg) 
 
 ### [Full Project Description](doc/project3_desc.md)
 
