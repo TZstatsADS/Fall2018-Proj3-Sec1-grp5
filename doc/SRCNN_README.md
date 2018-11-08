@@ -2,6 +2,7 @@
 -
 Tensorflow implementation of Convolutional Neural Networks for super-resolution. 
 ![SRCNN pic](https://bardofcodes.github.io/img/seminar-srcnn.png)
+
 ## Prerequisites
 
 * tensorflow > 1.4.0
@@ -18,7 +19,7 @@ Tensorflow implementation of Convolutional Neural Networks for super-resolution.
 
 #### Reproduce
 
-1. Adjust the dataset path
+1. Put `train_set` into `Data` folder
 2. Please run `prepare_data.ipynb` first, and produce `crop_train.h5` file which is around 8.5 GB.
 3. Run the `model.ipynb` to train the model.
 4. `SRCNN_check.h5` will be the pretrained model.

@@ -16,10 +16,11 @@ Term: Fall 2018
 + Project summary: In this project, we created a classification engine for enhance the resolution of images. 
 	
 **Contribution statement**: All team members approve our work presented in this GitHub repository including this contributions statement. 
+
 + Sizhu Chen: feature and superResolution coding, baseline model (GBM) tuning, presentation slides designing
 + Binglun Zhao: train and cross-validation efficiency improving, baseline model (GBM) tuning
 + Hengyang Lin:
-+ Yang Yue:
++ Yang Yue: SRCNN(Super Resolution CNN) implementation.
 + Bailey Pierson: MSE and PSNR coding, Random Forest attempt
 
 Following [suggestions](http://nicercode.github.io/blog/2013-04-05-projects/) by [RICH FITZJOHN](http://nicercode.github.io/about/#Team) (@richfitz). This folder is orgarnized as follows.
