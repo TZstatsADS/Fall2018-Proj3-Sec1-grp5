@@ -19,7 +19,7 @@ Term: Fall 2018
 
 + Sizhu Chen: feature and superResolution coding, baseline model (GBM) tuning, presentation slides designing
 + Binglun Zhao: train and cross-validation efficiency improving, baseline model (GBM) tuning
-+ Hengyang Lin: Keypoints feature extraction, XGBoost implementation, presentation
++ Hengyang Lin: Keypoints feature extraction, XGBoost implementation(Model selection using CrossValidation, SuperResolution), PSNR evalutaion, presentation.
 + Yang Yue: SRCNN(Super Resolution CNN) implementation.
 + Bailey Pierson: MSE and PSNR coding, Random Forest attempt
 
