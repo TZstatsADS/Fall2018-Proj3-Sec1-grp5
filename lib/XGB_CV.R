@@ -16,7 +16,6 @@ XGB_crossvalidation <- function(feat_dat, label_dat){
   for(b in 1:3){
     for(c in 1:2){
         for(e in 1:2){
-          
           max <- 200
           eva <- rep(0, max)
           params <- list(eta = v.eta[b], max_depth = v.depth[c], colsample_bytree = v.colsample_bytree[e])
